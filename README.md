@@ -74,9 +74,3 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 - **Share results**: Implicit Intent sharesheet for battle reports.
 
 ---
-
-## Syllabus Coverage
-- **Unit 1**: Android Architecture, Java 11, Gradle, Manifest
-- **Unit 2**: XML Layouts, Custom Canvas View, ListView + ArrayAdapter, RecyclerView + ViewHolder, Material Toolbar, Menus
-- **Unit 3**: Explicit/Implicit Intents, Notifications, DatePickerDialog, TimePickerDialog, AlertDialog, Toast
-- **Unit 4**: SQLiteOpenHelper, Cursor, ContentValues, CRUD, SharedPreferences
