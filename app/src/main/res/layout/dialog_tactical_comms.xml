@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gradient_navy"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_send"
+            app:tint="@color/radar_cyan" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="TACTICAL COMMUNICATIONS"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_dialog_comms_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encrypted Link • Admiral"
+                android:textColor="@color/radar_cyan"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_dialog_comms_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="@color/text_muted" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/navy_stroke" />
+
+    <!-- Message History Area -->
+    <ScrollView
+        android:id="@+id/scroll_dialog_comms"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_card_tactical"
+        android:fillViewport="true"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_chat_messages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dialog_comms_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="No tactical transmissions yet.\nSend a message or select a combat preset below."
+                android:textColor="@color/text_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Quick Tactical Comms Chips -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:letterSpacing="0.05"
+        android:text="QUICK TACTICAL PRESETS"
+        android:textColor="@color/gold_rank"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_quick_chips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/chip_direct_hit"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="0dp"
+                android:text="🎯 Direct Hit!"
+                android:textColor="@color/radar_cyan"
+                android:textSize="11sp"
+                app:strokeColor="@color/navy_stroke" />
+
+            <Button
+                android:id="@+id/chip_miss"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="0dp"
+                android:text="🌊 Splash / Miss!"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                app:strokeColor="@color/navy_stroke" />
+
+            <Button
+                android:id="@+id/chip_sunk"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="0dp"
+                android:text="💥 You sank my ship!"
+                android:textColor="@color/hit_red"
+                android:textSize="11sp"
+                app:strokeColor="@color/navy_stroke" />
+
+            <Button
+                android:id="@+id/chip_brace"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="0dp"
+                android:text="🛡️ Brace for impact!"
+                android:textColor="@color/gold_bright"
+                android:textSize="11sp"
+                app:strokeColor="@color/navy_stroke" />
+
+            <Button
+                android:id="@+id/chip_gg"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="0dp"
+                android:text="🫡 Well fought, Captain!"
+                android:textColor="@color/ship_deployed"
+                android:textSize="11sp"
+                app:strokeColor="@color/navy_stroke" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Dialog Input Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_dialog_chat_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_tactical"
+            android:hint="Type tactical transmission..."
+            android:imeOptions="actionSend"
+            android:inputType="textCapSentences"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/btn_dialog_chat_send"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_card_tactical"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_send"
+            app:tint="@color/radar_cyan" />
+    </LinearLayout>
+
+</LinearLayout>

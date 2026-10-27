@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_tactical"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <!-- Header with Icon and Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_crosshair"
+            app:tint="@color/radar_cyan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:letterSpacing="0.06"
+            android:text="JOIN BATTLE ROOM"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Subtitle Instruction -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="2dp"
+        android:text="Enter the 5-character Room Code provided by the host commander:"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+    <!-- Room Code Input Field -->
+    <EditText
+        android:id="@+id/et_join_room_code"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_input_tactical"
+        android:gravity="center"
+        android:hint="e.g. 84B9A"
+        android:imeOptions="actionDone"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:letterSpacing="0.25"
+        android:maxLength="8"
+        android:paddingHorizontal="16dp"
+        android:singleLine="true"
+        android:textColor="@color/radar_cyan"
+        android:textColorHint="@color/text_muted"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_join_cancel"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Cancel"
+            android:textColor="@color/text_secondary" />
+
+        <Button
+            android:id="@+id/btn_join_confirm"
+            style="@style/TacticalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Room"
+            android:textColor="@color/navy_abyssal" />
+    </LinearLayout>
+
+</LinearLayout>

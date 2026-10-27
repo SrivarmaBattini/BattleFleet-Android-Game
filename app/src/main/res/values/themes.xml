@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BATTLEFLEET" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/radar_cyan</item>
+        <item name="colorOnPrimary">@color/navy_abyssal</item>
+        <item name="colorPrimaryContainer">@color/navy_surface</item>
+        <item name="colorOnPrimaryContainer">@color/text_primary</item>
+        <item name="colorSecondary">@color/gold_rank</item>
+        <item name="colorOnSecondary">@color/navy_abyssal</item>
+        <item name="colorSurface">@color/navy_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/navy_abyssal</item>
+        <item name="android:navigationBarColor">@color/navy_abyssal</item>
+        <item name="android:windowBackground">@color/navy_abyssal</item>
+        <item name="materialAlertDialogTheme">@style/TacticalAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/TacticalAlertDialogTheme</item>
+    </style>
+
+    <style name="TacticalAlertDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/navy_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorPrimary">@color/radar_cyan</item>
+        <item name="buttonBarPositiveButtonStyle">@style/TacticalDialogPositiveButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TacticalDialogNegativeButton</item>
+    </style>
+
+    <style name="TacticalDialogPositiveButton" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/radar_cyan</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TacticalDialogNegativeButton" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Theme.BATTLEFLEET" parent="Base.Theme.BATTLEFLEET" />
+
+    <!-- Tactical Custom Button Styles -->
+    <style name="TacticalButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/radar_cyan</item>
+        <item name="android:textColor">@color/navy_abyssal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="elevation">4dp</item>
+    </style>
+
+    <style name="TacticalButton.Danger" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/hit_red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="TacticalButton.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/radar_cyan</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="android:textColor">@color/radar_cyan</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+</resources>

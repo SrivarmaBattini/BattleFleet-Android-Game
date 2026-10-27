@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark application theme inherits base. -->
+    <style name="Theme.BATTLEFLEET" parent="Base.Theme.BATTLEFLEET" />
+</resources>

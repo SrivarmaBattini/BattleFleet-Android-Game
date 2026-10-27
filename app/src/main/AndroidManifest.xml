@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Network & System Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.BATTLEFLEET">
+
+        <!-- Splash Screen (Launcher) -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BATTLEFLEET">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main HQ Dashboard -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Settings & Server Configuration -->
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Multiplayer Lobby -->
+        <activity
+            android:name=".activities.LobbyActivity"
+            android:exported="false" />
+
+        <!-- Ship Placement -->
+        <activity
+            android:name=".activities.ShipPlacementActivity"
+            android:exported="false" />
+
+        <!-- Main Battle Screen -->
+        <activity
+            android:name=".activities.BattleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Game Result -->
+        <activity
+            android:name=".activities.GameResultActivity"
+            android:exported="false" />
+
+        <!-- Combat Match History -->
+        <activity
+            android:name=".activities.MatchHistoryActivity"
+            android:exported="false" />
+
+        <!-- War Statistics -->
+        <activity
+            android:name=".activities.StatisticsActivity"
+            android:exported="false" />
+
+        <!-- Tactical Manual & Rules -->
+        <activity
+            android:name=".activities.RulesActivity"
+            android:exported="false" />
+
+    </application>
+</manifest>

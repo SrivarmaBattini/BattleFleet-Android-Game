@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_navy"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_rules"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy_secondary"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="TACTICAL MANUAL &amp; RULES"
+        app:titleTextColor="@color/text_primary" />
+
+    <!-- Action Bar / Header for Reminder Setting (TimePickerDialog) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy_card"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/tv_drill_reminder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Daily Combat Drill Reminder: None"
+            android:textColor="@color/radar_cyan"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_set_reminder_time"
+            style="@style/TacticalButton.Outline"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:paddingHorizontal="12dp"
+            android:text="Set Time"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- ListView (Unit 2 Syllabus Requirement) -->
+    <ListView
+        android:id="@+id/lv_rules"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/navy_stroke"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+</LinearLayout>

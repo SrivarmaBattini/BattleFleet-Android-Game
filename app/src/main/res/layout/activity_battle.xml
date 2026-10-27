@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_navy"
+    android:orientation="vertical">
+
+    <!-- Top Tactical Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_battle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy_secondary"
+        app:title="BATTLE ENGAGEMENT"
+        app:titleTextColor="@color/text_primary" />
+
+    <!-- Dynamic Turn Indicator Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/tv_battle_turn_badge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_turn_your"
+            android:gravity="center"
+            android:paddingVertical="6dp"
+            android:text="YOUR TURN - DESIGNATE TARGET"
+            android:textColor="@color/ship_deployed"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Fleet Status Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/tv_friendly_fleet_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Allied Fleet: 5/5 Intact"
+            android:textColor="@color/ship_deployed"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_enemy_fleet_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enemy Fleet: 5/5 Intact"
+            android:textColor="@color/hit_red"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="12dp">
+
+            <!-- Primary Board: Target Radar (Enemy) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:letterSpacing="0.05"
+                android:text="PRIMARY TARGETING RADAR (OPPONENT)"
+                android:textColor="@color/radar_cyan"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@color/navy_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/radar_cyan"
+                app:strokeWidth="1dp">
+
+                <com.example.battlefleet.views.BoardView
+                    android:id="@+id/board_opponent_radar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="6dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Secondary Board: Allied Fleet Defense -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.05"
+                android:text="ALLIED FLEET STATUS (DAMAGE CONTROL)"
+                android:textColor="@color/gold_rank"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@color/navy_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/navy_stroke"
+                app:strokeWidth="1dp">
+
+                <com.example.battlefleet.views.BoardView
+                    android:id="@+id/board_friendly_fleet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="6dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Combat Ticker / Event Log -->
+            <TextView
+                android:id="@+id/tv_battle_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card_tactical"
+                android:padding="10dp"
+                android:text="[RADAR] Both fleets deployed. Battle commenced!"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- In-Game Tactical Comms Drawer / Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/layout_battle_chat_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy_secondary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp">
+
+        <EditText
+            android:id="@+id/et_battle_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_tactical"
+            android:hint="Transmit comms message..."
+            android:imeOptions="actionSend"
+            android:inputType="textCapSentences"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/btn_battle_send_chat"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_send"
+            app:tint="@color/radar_cyan" />
+    </LinearLayout>
+</LinearLayout>

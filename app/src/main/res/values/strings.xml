@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">BattleFleet</string>
+    <string name="app_tagline">Naval Tactical TCP Warfare</string>
+
+    <!-- General -->
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_save">Save Settings</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_copy">Copy</string>
+    <string name="btn_leave">Leave</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_back">Back</string>
+
+    <!-- Navigation / Menu -->
+    <string name="menu_home">HQ</string>
+    <string name="menu_history">Combat Log</string>
+    <string name="menu_stats">War Records</string>
+    <string name="menu_settings">Radar Config</string>
+    <string name="menu_rules">Tactical Manual</string>
+    <string name="menu_share">Share Victory</string>
+    <string name="menu_about">About</string>
+
+    <!-- Connection -->
+    <string name="status_connected">ONLINE</string>
+    <string name="status_disconnected">OFFLINE</string>
+    <string name="status_connecting">CONNECTING...</string>
+    <string name="status_failed">CONNECTION FAILED</string>
+
+    <!-- Home Dashboard -->
+    <string name="welcome_commander">COMMANDER ON DECK</string>
+    <string name="action_host_room">HOST BATTLE ROOM</string>
+    <string name="action_host_sub">Establish tactical TCP room code</string>
+    <string name="action_join_room">JOIN BATTLE ROOM</string>
+    <string name="action_join_sub">Enter enemy or allied room code</string>
+    <string name="action_history">COMBAT HISTORY</string>
+    <string name="action_stats">FLEET STATISTICS</string>
+    <string name="action_manual">TACTICAL MANUAL &amp; RULES</string>
+    <string name="action_settings">COMMUNICATIONS &amp; SETUP</string>
+
+    <!-- Lobby -->
+    <string name="lobby_title">TACTICAL LOBBY</string>
+    <string name="room_code_label">ROOM FREQUENCY / CODE</string>
+    <string name="player_host_title">HOST COMMANDER</string>
+    <string name="player_guest_title">GUEST COMMANDER</string>
+    <string name="waiting_for_guest">Waiting for opponent to join...</string>
+    <string name="proceed_placement">DEPLOY FLEET</string>
+
+    <!-- Ship Placement -->
+    <string name="placement_title">FLEET DEPLOYMENT</string>
+    <string name="placement_instructions">Select a ship and tap the grid. Tap Rotate to toggle orientation.</string>
+    <string name="orientation_h">HORIZONTAL</string>
+    <string name="orientation_v">VERTICAL</string>
+    <string name="btn_rotate">ROTATE (H/V)</string>
+    <string name="btn_randomize">AUTO-DEPLOY</string>
+    <string name="btn_reset_fleet">RESET FLEET</string>
+    <string name="btn_deploy_fleet">CONFIRM DEPLOYMENT</string>
+    <string name="ships_placed_format">%1$d / 5 SHIPS POSITIONED</string>
+
+    <!-- Battle -->
+    <string name="battle_title">BATTLE ENGAGEMENT</string>
+    <string name="radar_title">ENEMY RADAR (TARGETING GRID)</string>
+    <string name="fleet_title">ALLIED FLEET (DAMAGE CONTROL)</string>
+    <string name="turn_your">YOUR TURN - FIRE TORPEDO</string>
+    <string name="turn_opponent">ENEMY TURN - BRACE FOR IMPACT</string>
+    <string name="surrender_confirm_title">Abort Engagement?</string>
+    <string name="surrender_confirm_msg">Leaving the battle will forfeit the match and record a defeat.</string>
+
+    <!-- Game Result -->
+    <string name="victory_title">VICTORY AT SEA</string>
+    <string name="defeat_title">FLEET DESTROYED</string>
+    <string name="stat_duration">Engagement Duration</string>
+    <string name="stat_shots">Shots Fired</string>
+    <string name="stat_hits">Direct Hits</string>
+    <string name="stat_accuracy">Firing Accuracy</string>
+    <string name="btn_share_result">SHARE BATTLE REPORT</string>
+    <string name="btn_play_again">ENGAGE NEW BATTLE</string>
+    <string name="btn_return_hq">RETURN TO HQ</string>
+
+    <!-- Chat -->
+    <string name="chat_title">SECURE COMMS</string>
+    <string name="chat_hint">Transmit message...</string>
+    <string name="chat_send">SEND</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">BattleFleet Tactical Alerts</string>
+    <string name="notif_channel_desc">Combat outcome and mission updates</string>
+</resources>

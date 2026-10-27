@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_navy"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_placement"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy_secondary"
+        app:title="FLEET DEPLOYMENT"
+        app:titleTextColor="@color/text_primary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Instruction & Fleet Status Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/tv_placement_counter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 / 5 SHIPS POSITIONED"
+                    android:textColor="@color/radar_cyan"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_orientation_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_turn_your"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="HORIZONTAL"
+                    android:textColor="@color/ship_deployed"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Interactive 10x10 Placement Grid -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardBackgroundColor="@color/navy_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/navy_stroke"
+                app:strokeWidth="1dp">
+
+                <com.example.battlefleet.views.BoardView
+                    android:id="@+id/board_placement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Ship Selector Tabs / Buttons -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layout_ship_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_ship_carrier"
+                        style="@style/TacticalButton.Outline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="Carrier (5)" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_ship_battleship"
+                        style="@style/TacticalButton.Outline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="Battleship (4)" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_ship_cruiser"
+                        style="@style/TacticalButton.Outline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="Cruiser (3)" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_ship_submarine"
+                        style="@style/TacticalButton.Outline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="Submarine (3)" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_ship_destroyer"
+                        style="@style/TacticalButton.Outline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Destroyer (2)" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Control Actions: Rotate, Randomize, Reset -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_rotate_orientation"
+                    style="@style/TacticalButton.Outline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="ROTATE (H/V)" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_randomize_placement"
+                    style="@style/TacticalButton.Outline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:text="AUTO-DEPLOY" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_reset_placement"
+                    style="@style/TacticalButton.Outline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="RESET" />
+            </LinearLayout>
+
+            <!-- Confirm & Deploy Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_confirm_deployment"
+                style="@style/TacticalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:enabled="false"
+                android:text="CONFIRM &amp; DEPLOY FLEET" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

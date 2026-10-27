@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Naval Tactical Palette -->
+    <color name="navy_abyssal">#080E1E</color>
+    <color name="navy_primary">#0B132B</color>
+    <color name="navy_secondary">#1C2541</color>
+    <color name="navy_surface">#243254</color>
+    <color name="navy_card">#172038</color>
+    <color name="navy_stroke">#33446B</color>
+
+    <!-- Radar / Tactical Accents -->
+    <color name="radar_cyan">#48CAE4</color>
+    <color name="radar_bright">#00F5D4</color>
+    <color name="radar_glow">#00B4D8</color>
+    <color name="gold_rank">#FFB703</color>
+    <color name="gold_bright">#FFD166</color>
+
+    <!-- Combat Event Colors -->
+    <color name="hit_red">#E63946</color>
+    <color name="hit_glow">#FF4D6D</color>
+    <color name="miss_blue">#3A86FF</color>
+    <color name="miss_splash">#90E0EF</color>
+    <color name="ship_deployed">#06D6A0</color>
+    <color name="ship_armor">#4A5568</color>
+    <color name="ship_preview_valid">#3306D6A0</color>
+    <color name="ship_preview_invalid">#33E63946</color>
+
+    <!-- Grid lines and cells -->
+    <color name="grid_cell_bg">#131B30</color>
+    <color name="grid_cell_stroke">#1F2C4C</color>
+    <color name="grid_cell_selected">#00B4D8</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#F8F9FA</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    <color name="text_radar">#48CAE4</color>
+
+    <!-- Base system -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
